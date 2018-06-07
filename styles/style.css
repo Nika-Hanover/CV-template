@@ -1,0 +1,394 @@
+/*Styles for display:
+ width: 1280px;
+ resolution: 96px per inch. */
+
+@font-face{
+	font-family: "Open Sans";
+	src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face{
+	font-family: "Open Sans Semibold";
+	src: url(../fonts/OpenSans-Semibold.ttf);
+}
+@font-face{
+	font-family: "/*  *//*  */Century Gothic";
+	src: url(../fonts/CenturyGothic.ttf);
+}
+@font-f/*  */ace{
+	font-family: "Century Gothic Bold";
+	src: url(../fonts/GOTHICB.TTF);
+}
+
+/*---------------------------
+Common rules-----------------*/
+
+html, body {
+	font: 13.33pt "Open Sans", sans-serif;
+	line-height: 1.7rem;
+	background-color: #fff;
+	padding: 0;
+	margin: 0;
+}
+h1,h2,h3 {
+	padding: 0;
+	margin: 0;
+}
+div{
+	box-sizing: border-box;
+}
+.wrapper{
+	margin: 0 auto;
+	max-width: 1300px;
+	min-width: 300px;
+	padding: 5%;
+}
+
+.left-col, .right-col{
+	padding: 0;
+	padding-bottom: 1.7rem;
+	margin: 0;
+}
+.left-col{
+	min-width: 240px;
+}
+.left-col__wrapper, .right-col__wrapper{
+	margin: 0;
+	padding: 0 4.3% 0 5.6%;
+}
+.uppercase{
+	text-transform: uppercase;
+}
+.justify{
+	text-align: justify;
+}
+.bold{
+	font-weight: bold;
+}
+.bc-gray{
+	background-color: #e5e6e7; /*grey general*/ 
+}
+
+.general-title{
+	font: 1.1rem "Century Gothic", sans-serif;
+	font-weight: bold;
+	padding: 1rem 0;
+	text-transform: uppercase;
+}
+h3{
+	font: 0.9rem "Century Gothic", sans-serif;
+	padding: 0.8rem 0;
+}
+.row {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-sm-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+.col-sm-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}
+
+/*---------------------------
+Left colomn-----------------*/
+
+.photo-box{
+	position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: #dbdcdd; /*dark-grey*/
+	overflow: hidden;
+}
+.photo-box::before{
+	content: "";
+	display: block;
+	padding-top: 109%;
+}
+.photo-content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	max-height: 100%;
+	width: 820px;
+	height: 900px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;  
+}
+
+
+.contact{
+	width: 100%;
+	padding: 1rem 0;
+}
+.contact-phone{
+	background-color: #07639a;
+}
+.contact-web{
+	background-color: #127cc2;
+}
+.contact-email{
+	background-color: #0099dc;
+}
+.contact__icon, .contact__text{
+	vertical-align: middle;
+}
+.contact__icon{
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	margin-right: 5%;
+}
+.contact__text{
+	font-size: 0.85rem;
+	color: #fff;
+}
+.icon-web, .icon-email, .icon-phone{
+	background: url(../images/sprites-contacts.png) no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center; 
+}
+.icon-phone{
+	background-position: 0 0;
+}
+.icon-email{
+	background-position: -70px 0px ;
+}
+.icon-web{
+	background-position: -35px 0px ;
+}
+
+
+.brief-info ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.brief-info__personal span{
+	display: inline-block;
+	width: 33%;
+}
+.brief-info__personal li span:last-child{
+	width: 55%;
+	padding-left: 1rem;
+}
+.brief-info__indicatior span{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	width: 48%;
+}
+.indicator{
+	width: 51%;
+	line-height: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #b6b6b7; /*dark-grey*/
+}
+.indicator-color{
+	display: block;
+	height: 0.45rem;
+	background-color: #00acec; /*general blue*/
+}
+
+
+.vcard{
+	padding-bottom: 1rem;
+}
+.vcard .fn{
+	padding-bottom: 0.3rem;
+}
+
+
+/*---------------------------
+Right colomn-----------------*/
+
+.name-title{
+	font: 2.8rem "Century Gothic Bold", "Open Sans", sans-serif;
+	letter-spacing: 0.5rem;
+	font-weight: 900;
+	color: #00acec; /*general blue*/
+	text-transform: uppercase;
+	padding-top: 2.5rem;
+}
+.name-title span{
+	display: inline-block;
+}
+.occupation{
+	font: 1.4rem "Open Sans Semibold", "Open Sans", sans-serif;
+	letter-spacing: 0.2rem;
+	display: block;
+	padding: 0.65rem 0;
+}
+.main-info__text{
+	font-size: 1.17rem;
+}
+
+.right-col .general-title{
+	margin-top: 1.8rem;
+	padding-left: 5.6%;
+}
+.detailed-info{
+	padding-top: 1.5rem;
+}
+.detailed-info p{
+	margin: 0;
+	padding: 0;
+}
+
+
+.hobby{
+	display: inline-block;
+	min-width: 120px;
+	width: 20%;
+	padding-top: 1rem;
+	padding-right: 4%;
+	text-align: center;
+}
+.hobby:last-child{
+	padding-right: 0;
+}
+.hobby-name{
+	font: 0.9rem "Century Gothic Bold", "Open Sans", sans-serif;
+}
+.hobby-icon{
+	display: block;
+	width: 100%;
+	height: 40px;
+	vertical-align: bottom;
+}
+.swimming, .music, .cycling, .photography, .bowling-pins{
+	display: inline-block;
+	background: #fff url(../images/sprites-hobbies.png) no-repeat;
+}
+.swimming{
+	background-position: -46px -5px ;
+	width: 54px;
+	height: 33px;
+}
+
+.music{
+	background-position: 0 -1px ;
+	width: 39px;
+	height: 39px;
+}
+
+.cycling{
+	background-position: -196px -2px ;
+	width: 43px;
+	height: 38px;
+}
+
+.photography{
+	background-position: -152px -7px ;
+	width: 38px;
+	height: 33px;
+}
+
+.bowling-pins{
+	background-position: -105px 0;
+	width: 42px;
+	height: 40px;
+}
+
+
+/*----------------------------------
+MEDIA QUERIES----------------------*/
+
+
+@media only screen and (max-width: 1104px) and (min-width: 576px){
+	.contact-web .contact__text, .contact-email .contact__text{
+		font-size: 0.75rem;
+	}
+	.brief-info{
+		font-size: 0.85rem;
+	}
+}
+@media only screen and (max-width: 930px) and (min-width: 577px){
+	.brief-info__personal, .brief-info__indicatior{
+		font-size: 1rem;
+	}
+	.brief-info li{
+		line-height: 0.9rem;
+		margin-bottom: 1rem;
+	}
+	.brief-info__personal span{
+		width: 60%;
+		margin-bottom: 0.7rem;
+	}
+	.brief-info__personal li span:last-child{
+		width: 100%;
+		padding-left: 0rem;
+	}
+	.brief-info__indicatior span{
+		width: 100%;
+	}
+	.indicator{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 785px) and (min-width: 577px){
+	.name-title{
+		padding-top: 0.8rem;
+	}
+	.main-info__text{
+		font-size: 1rem;
+	}.col-sm-4 {
+		-ms-flex: 0 0 46%;
+		flex: 0 0 46%;
+	}
+	.col-sm-8 {
+		-ms-flex: 0 0 64%;
+		flex: 0 0 64%;
+	}
+	.col-sm-4.detailed-info__name, .col-sm-8.detailed-info__description{
+		display: inline-block;
+		min-width: 100%;
+		padding-left: 5.6%;
+	}
+}
+@media only screen and (max-width: 725px) and (min-width: 577px){
+	.col-sm-8 {
+		-ms-flex: 0 0 55%;
+		flex: 0 0 55%;
+	}
+}  
+
+@media only screen and (max-width: 576px){
+	.contact__text, 
+	.contact-web .contact__text, 
+	.contact-email .contact__text{
+		font-size: 1rem;
+	}
+	.col-sm-4, .col-sm-8 {
+		display: inline-block;
+		min-width: 100%;
+	}
+}
+@media only screen and (max-width: 420px){
+	html, body {
+		font-size: 11pt;
+	}
+}
